@@ -1,0 +1,28 @@
+/*Background CSS*/
+body {
+    margin : 0 0 0 0;
+}
+#background {
+    z-index: -1;
+    position : fixed;
+
+}
+.background-images {
+    width : 100%;
+    height : auto;
+}
+
+/*End Background CSS*/
+
+/*Page CSS*/
+#wall {
+    position : relative;
+    width : 80%;
+    height : 1600px;
+    background-color : white;
+    opacity : .7;
+    left : 50%;
+    transform : translate(-50%, 0);
+}
+
+/*End Page CSS*/
