@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'page',
                         directives: [],
-                        template: "\n        <div id=\"wall\">\n            \n        </div>\n    "
+                        template: "\n        <div id=\"wall\"></div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Page);

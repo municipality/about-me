@@ -19,15 +19,22 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             Background = (function () {
+                // tracker = {};
+                // animationTracker = {};
+                //tuples = {};
                 function Background() {
-                    this.photoList = ["banner1.jpg", "banner2.jpg"];
+                    //photoList : string[] = ["banner1.jpg", "banner2.jpg"];
+                    this.photoList = ["sample.jpg"];
                     this.photos = [];
-                    this.numRows = 8;
-                    this.numCols = 6;
+                    this.numRows = 20;
+                    this.numCols = 8;
                     for (var row = 0; row < this.numRows; row++) {
                         this.photos.push([]);
                         for (var col = 0; col < this.numCols; col++) {
-                            this.photos[row].push(this.photoList[Math.floor(Math.random() * (this.photoList.length))]);
+                            this.photos[row].push({
+                                src: this.photoList[Math.floor(Math.random() * (this.photoList.length))],
+                                id: "" + row + col
+                            });
                         }
                     }
                 }
@@ -35,7 +42,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'background',
                         //template for row by column image generation
-                        template: "\n        <div id='background'>\n            <tr *ngFor=\"#row of photos\">\n                <td *ngFor=\"#item of row\">\n                    <img class=\"background-images\" src='images/{{item}}'>\n                    <!--<img class=\"background-images\" src='images/banner2.jpg'>-->\n                </td>\n            </tr>\n        </div>\n    "
+                        //#image lets you access "this" in the "loaded" function
+                        template: "\n        <div id='background'>\n            <tr *ngFor=\"#row of photos\">\n                <td *ngFor=\"#item of row\">\n                    <div class='imagecon'>\n                        <img #image id='background-{{item.id}}' class=\"background-images\" src='images/{{item.src}}'>\n                    </div>\n                </td>\n            </tr>\n        </div>\n\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Background);

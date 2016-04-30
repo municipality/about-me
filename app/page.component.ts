@@ -4,9 +4,7 @@ import {Component} from 'angular2/core';
     selector : 'page',
     directives : [],
     template : `
-        <div id="wall">
-            
-        </div>
+        <div id="wall"></div>
     `
 })
 export class Page {
