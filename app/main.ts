@@ -13,7 +13,8 @@ import {Page} from './page.component';
 })
 
 class App {
-
+    constructor () {
+    }
 }
 
 bootstrap(App);

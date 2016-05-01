@@ -2,12 +2,15 @@
 body {
     margin : 0 0 0 0;
 }
+
 #background {
     top : -50px;
     position : fixed;
     min-width : 1000px;
 }
+
 #background img{
+    float :left;
     width : 100%;
     height : auto;
     /* Chrome, Safari, Opera */
@@ -34,7 +37,6 @@ body {
     filter: saturate(2) opacity(100%);*/
     -webkit-filter: none;
     filter: none;
-
     -webkit-transition: all .5s ease;
      -moz-transition: all .5s ease;
        -o-transition: all .5s ease;
@@ -47,21 +49,52 @@ body {
             transition: all 1s ease;*/
 }
 
-.animation-images {
-    position : absolute
-}
-
 /*End Background CSS*/
 
 /*Page CSS*/
+p {
+    font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
 #wall {
-    position : fixed;
+    position : relative;
     width : 60%;
-    height : 100%;
-    background-color : white;
-    opacity : .5;
+    height : auto;
+    background-color : rgba(255, 255, 255, 0.7);
     left : 50%;
     transform : translate(-50%, 0);
+    min-width : 500px;
+}
+
+#square-table {
+    max-width: 100%;
+    table-layout: fixed;
+    width : 100%;
+}
+
+.square {
+    z-index : 1;
+    background-color : rgba(180, 225, 240, .7);
+    margin : 20px 10px 20px 10px;
+    width : 100%
+    min-width: 100px;
+}
+
+.square-title {
+    margin : 2px 0 2px 0;
+    text-align : center;
+}
+
+.square-image {
+    max-width : 100%;
+    max-height : auto;
+}
+
+.square-description {
+    font-size : 10pt;
+    margin : 2px 0 2px 0;
+    text-align : center;
 }
 
 /*End Page CSS*/
